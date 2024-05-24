@@ -17,7 +17,7 @@ class YAxisui extends StatelessWidget {
           // height: 100,
           width: MediaQuery.sizeOf(context).height,
           height: 10,
-          color: Colors.black,
+          color: Colors.red,
         ),
         const SizedBox(
           height: 100,
@@ -26,7 +26,7 @@ class YAxisui extends StatelessWidget {
           // height: 10,
           width: MediaQuery.sizeOf(context).height,
           height: 10,
-          color: Colors.black,
+          color: Colors.blue,
         ),
         const SizedBox(
           height: 100,
@@ -53,7 +53,7 @@ class XAxisUI extends StatelessWidget {
           // height: 100,
           height: MediaQuery.sizeOf(context).height,
           width: 10,
-          color: Colors.black,
+          color: Colors.green,
         ),
         const SizedBox(
           width: 100,
@@ -62,7 +62,7 @@ class XAxisUI extends StatelessWidget {
           // height: 10,
           height: MediaQuery.sizeOf(context).height,
           width: 10,
-          color: Colors.black,
+          color: Colors.yellow,
         ),
         const SizedBox(
           width: 100,
