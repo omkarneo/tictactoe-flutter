@@ -20,6 +20,7 @@ class _GamePageState extends ConsumerState<GamePage> {
 
     return Scaffold(
       appBar: AppBar(
+        title: const Text("Tic Tac Toe"),
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:tic_tac_toe/page/number_puzzle.dart';
 import 'package:tic_tac_toe/page/tic_tac_toe.dart';
 
 void main() {
@@ -14,12 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ProviderScope(
       child: MaterialApp(
-        title: 'Tic Tac Toe',
+        title: 'Games',
         theme: ThemeData(
           // colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: const MyHomePage(title: 'Tic Tac Toe'),
+        home: const MyHomePage(title: 'Games'),
       ),
     );
   }
@@ -54,7 +55,16 @@ class _MyHomePageState extends State<MyHomePage> {
                         builder: (context) => const GamePage(),
                       ));
                 },
-                child: const Text("Play"))
+                child: const Text("Play Tic tac toe")),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const PuzzleGame(),
+                      ));
+                },
+                child: const Text("Number Puzzle Play"))
           ],
         ),
       ),
