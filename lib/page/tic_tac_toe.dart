@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -44,24 +45,24 @@ class _GamePageState extends ConsumerState<GamePage> {
                   TextSpan(
                       text: "${counter % 2 == 0 ? "X" : "O"}'s",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 25,
                           fontWeight: FontWeight.w600,
                           color: counter % 2 == 0 ? Colors.red : Colors.green)),
                   const TextSpan(
                       text: " Turns",
                       style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 20,
                           fontWeight: FontWeight.w600,
                           color: Colors.black))
                 ]),
               ),
             ),
-            const SizedBox(
-              height: 30,
-            ),
+            // const SizedBox(
+            //   height: 30,
+            // ),
             SizedBox(
-              height: 500,
-              width: 500,
+              width: MediaQuery.sizeOf(context).width * 0.9,
+              height: MediaQuery.sizeOf(context).height * 0.63,
               child: Stack(
                 children: [
                   const XAxisUI(),
@@ -190,6 +191,7 @@ class _GamePageState extends ConsumerState<GamePage> {
                 ],
               ),
             ),
+            Spacer()
           ],
         ),
       ),

@@ -15,8 +15,8 @@ class TicTacComponent extends StatelessWidget {
           ontap();
         },
         child: Container(
-          height: 100,
-          width: 100,
+          height: MediaQuery.sizeOf(context).height * 0.12,
+          // width: MediaQuery.sizeOf(context).width * 0.,
           child: (iscross == "")
               ? const SizedBox.shrink()
               : Lottie.asset(
@@ -24,7 +24,9 @@ class TicTacComponent extends StatelessWidget {
                   repeat: false,
                   reverse: true,
                   animate: true,
-                ),
+                  fit: BoxFit.fitHeight,
+                  height: 100,
+                  width: 100),
           // : Icon(
           //     (iscross == "X") ? Icons.close : Icons.circle_outlined,
           //     size: 100,
